@@ -1,4 +1,4 @@
-z<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -12,7 +12,7 @@ z<%@ page language="java" contentType="text/html; charset=UTF-8"
 </head>
 <body>
 
-	<form action="/guestbook3/add" method="post">
+	<form action="${pageContext.request.contextPath}/add" method="post">
 		<table border='1'>
 			<tr>
 				<td>이름</td>
@@ -41,7 +41,7 @@ z<%@ page language="java" contentType="text/html; charset=UTF-8"
 				<td>${guestVo.no}</td>
 				<td>${guestVo.name}</td>
 				<td>${guestVo.reg_date}</td>
-				<td><a href="/guestbook3/deleteForm?no=${guestVo.no}">삭제</a></td>
+				<td><a href="${pageContext.request.contextPath}/deleteForm?no=${guestVo.no}">삭제</a></td>
 			</tr>
 			
 			<tr>
